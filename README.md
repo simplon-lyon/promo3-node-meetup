@@ -35,5 +35,19 @@ We are going to delete information from the database:
     - add for each event a link to delete the event
     - replace the default reaction of the form by an AJAX request to `/event/add`
    - replace the default reaction of the links by an AJAX request to `/event/del`
-5. in `index.js` add the `/event/get` handler to get all events as JSON
-6. in `template/index.html` update the event list after each AJAX request using `/event/get`
+
+## Creating New Template
+
+We are going to add two new templates:
+
+1. create a new file `template/new-event.html` which will contains
+the form to create a new `event`:
+    - the form should be ready to be pre-fill with data using Mustache
+    - it would be better to use AJAX and display a message to the user on form submission (so he is no redirected to `/event/add`)
+2. in `index.js` add a `/new-event` handler which serves `template/new-event.html`:
+    - the handler must take an URL parameter with an event ID
+    - the handler should fill the form if there is an event matching the ID
+3. create a new file `template/event.html` which will display detail information on an event
+4. in `index.js` add a `/event` handler which serves `template/event.html`:
+    - the handler must take an URL parameter with an event ID
+    - the handler must fill the template using the event information
