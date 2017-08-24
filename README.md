@@ -24,7 +24,7 @@ We are going to create an in-memory database to store event:
     - edit the `/` handler to pass the `events` to your template
 2. edit `template/index.html` to:
     - add a form to submit an event to `event/add`
-   - display all the events on the page (edited)
+    - display all the events on the page (edited)
 
 ## Removing Event
 
@@ -34,7 +34,7 @@ We are going to delete information from the database:
 2. in `template/index.html`:
     - add for each event a link to delete the event
     - replace the default reaction of the form by an AJAX request to `/event/add`
-   - replace the default reaction of the links by an AJAX request to `/event/del`
+    - replace the default reaction of the links by an AJAX request to `/event/del`
 
 ## Creating New Template
 
@@ -51,3 +51,15 @@ the form to create a new `event`:
 4. in `index.js` add a `/event` handler which serves `template/event.html`:
     - the handler must take an URL parameter with an event ID
     - the handler must fill the template using the event information
+
+## Adding User
+
+We are going to add user to our website:
+
+1. edit `index.js` to:
+    - create an `users` variable which will store all the users
+    - add the `/user/add` handler to add an user to the `users` variable (user should be an object with at least a name and a pass)
+    - add the `/user/del` handler to delete an user from the `users` variable
+3. create a new file `template/new-user.html` with a form to POST user to `/user/add`
+4. in `index.js` add a `/new-user` handler which serves `template/new-user.html`
+5. edit `template/index.html` to add a link to `/new-user`
