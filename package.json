@@ -1,0 +1,23 @@
+{
+  "name": "promo3-node-meetup",
+  "version": "0.0.1",
+  "description": "A Meetup application using Node, Mustache Template, Bootstrap and a database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplon-lyon/promo3-node-meetup.git"
+  },
+  "author": "L. Arod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simplon-lyon/promo3-node-meetup/issues"
+  },
+  "homepage": "https://github.com/simplon-lyon/promo3-node-meetup#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mustache": "^2.3.0"
+  }
+}
